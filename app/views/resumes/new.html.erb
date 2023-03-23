@@ -1,1 +1,30 @@
 <h1>新增履歷</h1>
+
+
+
+    <%
+=begin%>
+    t.string "name"
+    t.string "email"
+    t.string "tel"
+    t.string "skill"
+    t.text "intro"
+    t.string "city"
+    t.text "education"
+    t.text "experience"
+    t.text "portfolio" 
+<%
+=end%>
+<%= form_for @resume do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <br>
+    <%= f.label :tel %>
+    <%= f.telephone_field :tel %>
+    <br>
+    <hr>
+    <%= f.submit %>
+<% end %>
