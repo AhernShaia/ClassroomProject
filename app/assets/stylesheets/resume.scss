@@ -1,0 +1,37 @@
+.resume-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    .resume-card {
+        background-color: cadetblue;
+    }
+
+    header {
+        .cover {
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
+                
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+
+        .functions {
+            .btn {
+                text-decoration: none;
+                margin: 4px 8px;
+                background-color: burlywood;
+                color: aliceblue;
+            }
+            .btn:hover {
+                background-color: lightblue;
+            }
+        }
+    }
+}

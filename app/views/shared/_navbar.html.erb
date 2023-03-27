@@ -1,5 +1,13 @@
  <nav class="navbar">
-    <%= link_to "首頁", root_path %>
+    
+    <%
+=begin%>
+ <%= link_to "首頁", root_path %> 
+<%
+=end%>
+ <a class="logo" href="/">
+      <%= image_pack_tag "logo.png" %>
+    </a>
   <ul>
   <li>
     <%= link_to "新增履歷", resumes_new_path %>

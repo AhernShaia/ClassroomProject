@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
     def index
-        
+        @resumes = Resume.order(create_at: :desc)
     end
     def new
         @resume = Resume.new

@@ -3,8 +3,12 @@
 
 <%= render "shared/form/error_message", record: @resume %>
 
+<%= link_to "回到履歷列表", resumes_path %>
 
-
+<div class="basic-grey">
+<h1>履歷表
+            <span>Please fill all the texts in the fields.</span>
+        </h1>
 <%= form_for @resume do |f| %>
     <div class="field">
         <%= f.label :name %>
@@ -52,6 +56,6 @@
         <%= f.text_area :portfolio %>
     </div>
     <br>
-    <hr>
-    <%= f.submit %>
+    <%= f.submit class:"button" %>
 <% end %>
+</div>
