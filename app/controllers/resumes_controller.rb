@@ -10,8 +10,7 @@ class ResumesController < ApplicationController
         @resume = Resume.new(resume_params)
         if @resume.save
             redirect_to root_path, notice: "建立履歷"
-        else
-            
+        else            
             render :new
         end
     end

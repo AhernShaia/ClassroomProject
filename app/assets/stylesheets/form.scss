@@ -1,0 +1,25 @@
+form {
+    .field {
+        margin: 10px 0;
+          
+    }
+
+    label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+    }
+}
+
+.error-message {
+    ul{
+        list-style: none;
+        li{
+            display: inline;
+            border: 1px red solid;
+            color: red;
+            padding: 5px;
+            margin: 10px 0;
+}
+        }
+    }

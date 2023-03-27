@@ -1,29 +1,56 @@
 <h1>新增履歷</h1>
 
 
+<%= render "shared/form/error_message", record: @resume %>
 
-    <%
-=begin%>
-    t.string "name"
-    t.string "email"
-    t.string "tel"
-    t.string "skill"
-    t.text "intro"
-    t.string "city"
-    t.text "education"
-    t.text "experience"
-    t.text "portfolio" 
-<%
-=end%>
+
+
 <%= form_for @resume do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    
     <br>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
+    <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    </div>
     <br>
-    <%= f.label :tel %>
-    <%= f.telephone_field :tel %>
+    <div class="field">
+        <%= f.label :tel %>
+        <%= f.telephone_field :tel %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :skill %>
+        <%= f.text_field :skill %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :intro %>
+        <%= f.text_area :intro %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+    </div>
+    <br>
+
+    <div class="field">
+        <%= f.label :education %>
+        <%= f.text_area :education %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :experience %>
+        <%= f.text_area :experience %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :portfolio %>
+        <%= f.text_area :portfolio %>
+    </div>
     <br>
     <hr>
     <%= f.submit %>

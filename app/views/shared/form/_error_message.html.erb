@@ -1,0 +1,9 @@
+<% if record.errors.any? %>
+    <section class="error-message">
+    <% record.errors.full_messages.each do |msg| %>
+        <ul>
+            <li><%= msg %></li>
+        </ul>
+    <% end %>
+    </section>
+<% end %>

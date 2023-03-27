@@ -11,14 +11,11 @@
   </head>
 
   <body>
-  <%= render "shared/navbar" %>
+  <%= render "shared/navbar"  %>
+  <%= render "shared/flash" if flash.any?%>
 
-  <% if flash.any? %>
-    <div class="flash">
-      <%= flash[:notice] %>
-      <button>X</button>
-    </div>
-  <% end %>
+ 
+
   <main>
     <%= yield %>
     </main>

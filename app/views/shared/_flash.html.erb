@@ -1,0 +1,9 @@
+
+     <%  [:notice, :alert].each do |t| %>
+        <% if flash[t] %>
+            <div class="flash">
+                <%= flash[:notice] %>
+            <button>X</button>
+            </div>
+        <% end %>
+    <% end %>
