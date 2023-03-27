@@ -1,3 +1,16 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.flash {
+    background-color: #38f684;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    padding-left: 20px;
+    button {
+        margin: 10px;
+       
+    }
+}
