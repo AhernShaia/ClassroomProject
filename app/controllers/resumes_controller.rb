@@ -1,7 +1,13 @@
 class ResumesController < ApplicationController
-    before_action :find_params, only: [:edit, :update, :show, :destory]
+    before_action :find_params, only: [:edit, :update, :show, :destroy]
     def index
+        # 搜索 lazy loading
         @resumes = Resume.order(create_at: :desc)
+        if params[:keyword].present?
+            @resumes = @resumes.seach(params[:keyword])
+        end
+        # @resumes = Resume.order(create_at: :desc)
+        # debugger
     end
     def new
         @resume = Resume.new
@@ -17,6 +23,24 @@ class ResumesController < ApplicationController
     end
     def show
         
+    end
+
+    def edit
+        
+    end
+
+    def update
+        
+        if @resume.update(resume_params)
+            redirect_to @resume
+        end
+    end
+
+    def destroy
+        
+        if @resume.destroy
+            redirect_to @resume
+        end
     end
 
 

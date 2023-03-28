@@ -1,0 +1,58 @@
+
+<%= render "shared/form/error_message", record: resume %>
+
+
+<div class="basic-grey">
+<h1>履歷表
+            <span>Please fill all the texts in the fields.</span>
+        </h1>
+<%= form_for resume do |f| %>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    
+    <br>
+    <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :tel %>
+        <%= f.telephone_field :tel %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :skill %>
+        <%= f.text_field :skill %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :intro %>
+        <%= f.text_area :intro %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+    </div>
+    <br>
+
+    <div class="field">
+        <%= f.label :education %>
+        <%= f.text_area :education %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :experience %>
+        <%= f.text_area :experience %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :portfolio %>
+        <%= f.text_area :portfolio %>
+    </div>
+    <br>
+    <%= f.submit class:"button" %>
+<% end %>
+</div>

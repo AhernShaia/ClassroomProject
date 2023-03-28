@@ -4,5 +4,7 @@ class Resume < ApplicationRecord
                                                 message: "only email letters" }
 
 
-                                     
+    def self.seach(keyword)
+        where("name like ?", "%#{keyword}%")
+    end                                 
 end
