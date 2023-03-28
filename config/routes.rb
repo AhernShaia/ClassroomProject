@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   # resources :resumes
   get "/resumes", to: "resumes#index"
   get "/resumes/new", to: "resumes#new"
-  get "/resumes/edit", to: "resumes#edit"
-  get "/resumes/show", to: "resumes#show"
+  # get "/resume/:id/edit", to: "resumes#edit"
+  get "/resumes/:id", to: "resumes#show", as: '/resumes/show'
   post "/resumes", to: "resumes#create"
-
   root "pages#home"
-  # get "/", to: "pages#home", as: "root"
+
+  get "/resumes/@:userid/:slug", to: "resumes#slug"
+  
+
   get "/about", to: "pages#about"
   get "/contact", to: "pages#contact"
 end

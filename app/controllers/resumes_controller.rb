@@ -1,4 +1,5 @@
 class ResumesController < ApplicationController
+    before_action :find_params, only: [:edit, :update, :show, :destory]
     def index
         @resumes = Resume.order(create_at: :desc)
     end
@@ -13,6 +14,9 @@ class ResumesController < ApplicationController
         else            
             render :new
         end
+    end
+    def show
+        
     end
 
 
@@ -29,5 +33,9 @@ class ResumesController < ApplicationController
             :experience,
             :portfolio
         )
+    end
+
+    def find_params
+        @resume = Resume.find(params[:id])
     end
 end

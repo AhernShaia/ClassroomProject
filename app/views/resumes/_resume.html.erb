@@ -8,14 +8,14 @@
                     <address class="location"><%= resume.city %></address>
                 </div>
                 <article class="intro">
-                    <%= link_to resume.intro&.truncate(50), resumes_show_path %>
+                    <%= link_to resume.intro&.truncate(50), resumes_show_path(resume) %>
                 </article>            
             </section>
         <footer>
             <div class="update">更新時間: <%= formatDate(resume.updated_at)%></div>
 
             <div class="functions">
-            <%= link_to "編輯", resumes_edit_path, class: 'btn' %>
+            <%= link_to "編輯", 'resumes_edit_path', class: 'btn' %>
             <%= link_to "建立副本", 'model', class: 'btn'  %>
             <%= link_to "刪除", 'model', class: 'btn'  %>
             
