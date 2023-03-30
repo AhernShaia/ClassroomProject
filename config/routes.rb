@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # resources :resumes
-  resource :user, except: %i[new destroy] do
+  resource :users, except: %i[new destroy] do
     get "sign_up", action: "new"
   end
 

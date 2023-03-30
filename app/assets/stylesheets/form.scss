@@ -37,7 +37,10 @@ padding-right: 10px;
 color: #888;
 
 }
-.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+.basic-grey input[type="text"],
+.basic-grey input[type="email"],
+.basic-grey input[type="password"],
+.basic-grey textarea, .basic-grey select {
 border: 1px solid #DADADA;
 color: #888;
 height: 30px;
@@ -57,8 +60,8 @@ height: 30px;
  padding: 5px 3px 3px 5px;
  }
 .basic-grey select {
-background: #FFF url('down-arrow.png') no-repeat right;
-background: #FFF url('down-arrow.png') no-repeat right;
+// background: #FFF url('down-arrow.png') no-repeat right;
+// background: #FFF url('down-arrow.png') no-repeat right;
 appearance:none;
 -webkit-appearance:none;
 -moz-appearance: none;
