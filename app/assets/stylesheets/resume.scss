@@ -4,7 +4,9 @@
     gap: 10px;
 
     .resume-card {
-        background-color: cadetblue;
+        // background-color: cadetblue;
+        padding: 20px;
+        border: 1px solid #686868;
     }
 
     header {
@@ -12,7 +14,7 @@
             img {
                 width: 100%;
                 object-fit: cover;
-                object-position: center center;
+                // object-position: center center;
                 
             }
         }
@@ -34,4 +36,7 @@
             }
         }
     }
+}
+h1 {
+    color: cornflowerblue;
 }

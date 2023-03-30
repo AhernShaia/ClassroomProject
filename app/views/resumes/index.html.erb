@@ -6,4 +6,9 @@
 
 
 <%= link_to "新增履歷", resumes_new_path %>
-<%= render "resume", resumes: @resumes %>
+<%
+=begin%>
+ <%= render partial: "resume", collection: @resumes %> 
+<%
+=end%>
+<%= render @resumes %>
