@@ -6,10 +6,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_path
+      redirect_to root_path, notice: "註冊成功"
     else
       render :new
     end
+  end
+
+  def sign_in
+    @user = User.new
   end
 
   private
@@ -23,4 +27,6 @@ class UsersController < ApplicationController
       :gender
     )
   end
+
+  private
 end

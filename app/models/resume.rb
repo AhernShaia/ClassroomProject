@@ -6,6 +6,7 @@ class Resume < ApplicationRecord
               with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i,
               message: "only email letters"
             }
+  acts_as_paranoid
 
   def self.seach(keyword)
     where("name like ?", "%#{keyword}%")

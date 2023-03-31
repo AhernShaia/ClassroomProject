@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :nickname
       t.date :birthday
       t.integer :role, default: 1
-      # 1:user, 2:, 3:
+      #  1: user, 2: company, 3: staff
       t.integer :gender, default: 0
       # 0:不公開, 1:男, 2:女
 

@@ -87,3 +87,11 @@ color: #FFF;
  .basic-grey .button:hover {
  background: #CF7A7A
  }
+ .field_with_errors {
+    display: inline;
+    input[type=email],
+    input[type=text],
+    input[type=tel]{
+        border: 1px red solid;
+    }
+}
